@@ -1,0 +1,12 @@
+[submodule "datamart-wikifier"]
+	path = datamart-wikifier
+	url = git@github.com:usc-isi-i2/datamart-wikifier.git
+	branch = master_dm
+[submodule "datamart-userend"]
+	path = datamart-userend
+	url = git@github.com:usc-isi-i2/datamart-userend.git
+	branch = d3m_dm
+[submodule "datamart-upload"]
+	path = datamart-upload
+	url = git@github.com:usc-isi-i2/datamart-upload.git
+	branch = rest_api_stable_dm

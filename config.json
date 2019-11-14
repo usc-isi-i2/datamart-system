@@ -1,0 +1,37 @@
+{
+    "setup_data_dir": "/data/datamart-setup-data",
+    "augment_seed_datasets_dir": "/data/datasets/seed_datasets_data_augmentation",
+    
+    "setup_specification": [
+	{
+	    "name": "datamart_journal",
+	    "data_file": "blazegraph.jnl.*.tgz",
+	    "destination": "./satellite_blazegraph"
+	},
+	{
+	    "name": "datasets_uploads",
+	    "data_file": "datasets_uploads.*.tgz",
+	    "destination": "./memcache_storage"
+	},
+	{
+	    "name": "password",
+	    "data_file": "password_tokens.*.tgz",
+	    "destination": "datamart-upload/datamart_isi"
+	},
+	{
+	    "name": "redis",
+	    "data_file": "redis.*.tgz",
+	    "destination": "."
+	},
+	{
+	    "name": "wikidata_code",
+	    "data_file": "wikidata-code.*.tgz",
+	    "destination": "."
+	},
+	{
+	    "name": "wikidata_journal",
+	    "data_file": "wikidata.jnl.20191025.zip",
+	    "destination": "./wikidata"
+	}
+    ]
+}
