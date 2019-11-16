@@ -13,7 +13,7 @@ function usage {
     echo 
     echo "Without any argument start/stop all ISI datamart related services."
     echo "Use -d to start/stop ISI datamart server"
-    echo "Use -w to start/stop Wikidta Blazegraph"
+    echo "Use -w to start/stop Wikidata Blazegraph"
     echo "Use -e to start/stop Elasticsearch"
 }
 
