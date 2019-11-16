@@ -16,6 +16,14 @@ function usage {
     echo "Use -w to start/stop Wikidta Blazegraph"
     echo "Use -e to start/stop Elasticsearch"
 }
+
+if [[ ! -e env.sh ]]; then
+    echo Environment variable file env.sh does not exists. Run ./setup.py.
+    exit 1
+fi
+
+source env.sh
+
 start_datamart=1
 prefix="Starting"
 if [[ $0 =~ "stop" ]]; then
@@ -53,7 +61,7 @@ fi
 
 if [[ "$wikidata" -eq 1 ]]; then
     echo $prefix Wikidata
-    cd wikidata/
+    cd data/wikidata/
     if [[ "$start_datamart" -eq 1 ]]; then
 	echo "./start.sh"
 	./start.sh
@@ -61,7 +69,7 @@ if [[ "$wikidata" -eq 1 ]]; then
 	echo "./stop.sh"
 	./stop.sh
     fi
-    cd ..
+    cd $base
 fi
 
 if [[ "$elasticsearch" -eq 1 ]]; then
@@ -74,13 +82,13 @@ if [[ "$elasticsearch" -eq 1 ]]; then
 	echo "docker-compose down"
 	docker-compose down
     fi
-    cd ../..
+    cd $base
 fi
 
 if [[ "$datamart" -eq 1 ]]; then
     echo $prefix Datamart
-    cd datamart/datamart-upload
-    source env-datamachines.sh
+    cd datamart-upload
+    # source env-datamachines.sh
     if [[ "$start_datamart" -eq 1 ]]; then
 	echo "docker-compose up &> $base/log/datamart.log &"
 	nohup docker-compose up &> $base/log/datamart.log &
@@ -88,6 +96,6 @@ if [[ "$datamart" -eq 1 ]]; then
 	echo "docker-compose down"
 	docker-compose down
     fi
-    cd ../..
+    cd $base
 fi
 
