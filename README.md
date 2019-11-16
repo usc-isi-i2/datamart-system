@@ -50,17 +50,21 @@ To run the setup, do:
 ./setup.py
 ```
 
+The setup.py script will create an environment variable file, `env.sh` need to start/stop the ISI Datamart.
+
 ## Starting and Stopping the ISI Datamart
 
 To start the Datamart:
 
 ```
+source env.sh
 ./start-datamart.sh
 ```
 
 To stop the Datamart:
 
 ```
+source env.sh
 ./stop-datamart.sh
 ```
 
