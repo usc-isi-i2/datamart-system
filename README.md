@@ -28,7 +28,7 @@ Also, you will need the D3M seed augmentation datasets.
 Clone the ISI Datamart System Repo
 
 ```
-git clone git@github.com:usc-isi-i2/datamart-system.git
+git clone --recurse-submodules git@github.com:usc-isi-i2/datamart-system.git
 ```
 
 Edit the configuration files [config.json](config.json). The `setup_data_dir` field should point to
