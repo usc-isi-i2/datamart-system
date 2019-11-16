@@ -9,7 +9,7 @@ import os
 import subprocess
 import sys
 
-TEST_RUN = 1
+TEST_RUN = 0
 def run_command(command):
     if TEST_RUN:
         print('Command: ', command)

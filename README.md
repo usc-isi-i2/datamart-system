@@ -44,6 +44,12 @@ By default the configuration file will extract/upload Wikidata and Elasticsearch
 
 Uploading the Elasticsearch data takes a very long time.
 
+To run the setup, do:
+
+```
+./setup.py
+```
+
 ## Starting and Stopping the ISI Datamart
 
 To start the Datamart:
