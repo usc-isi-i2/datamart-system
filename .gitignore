@@ -105,3 +105,8 @@ venv.bak/
 
 # emacs
 *~
+
+# automatically created files
+/data/
+/env.sh
+

@@ -66,7 +66,7 @@ fi
 
 if [[ "$elasticsearch" -eq 1 ]]; then
     echo $prefix Elasticsearch
-    cd wikidata_es/wikibase-docker/
+    cd wikibase-docker/
     if [[ "$start_datamart" -eq 1 ]]; then
 	echo "nohup docker-compose up &> $base/log/elasticsearch.log &"
 	nohup docker-compose up &> $base/log/elasticsearch.log &

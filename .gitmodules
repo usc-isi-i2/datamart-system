@@ -10,3 +10,7 @@
 	path = datamart-upload
 	url = git@github.com:usc-isi-i2/datamart-upload.git
 	branch = rest_api_stable_dm
+[submodule "wikibase-docker"]
+	path = wikibase-docker
+	url = git@github.com:usc-isi-i2/wikibase-docker.git
+	branch = master_dm

@@ -5,33 +5,45 @@
     "setup_specification": [
 	{
 	    "name": "datamart_journal",
+	    "action": "extract",
 	    "data_file": "blazegraph.jnl.*.tgz",
-	    "destination": "./satellite_blazegraph"
+	    "destination": "./data/satellite_blazegraph"
 	},
 	{
 	    "name": "datasets_uploads",
+	    "action": "extract",
 	    "data_file": "datasets_uploads.*.tgz",
-	    "destination": "./memcache_storage"
+	    "destination": "./data/memcache_storage"
 	},
 	{
 	    "name": "password",
+	    "action": "extract",
 	    "data_file": "password_tokens.*.tgz",
 	    "destination": "datamart-upload/datamart_isi"
 	},
 	{
 	    "name": "redis",
+	    "action": "extract",
 	    "data_file": "redis.*.tgz",
-	    "destination": "."
+	    "destination": "./data"
 	},
 	{
 	    "name": "wikidata_code",
+	    "action": "extract",
 	    "data_file": "wikidata-code.*.tgz",
-	    "destination": "."
+	    "destination": "./data"
 	},
 	{
 	    "name": "wikidata_journal",
+	    "action": "extract",
 	    "data_file": "wikidata.jnl.20191025.zip",
-	    "destination": "./wikidata"
+	    "destination": "./data/wikidata"
+	},
+	{
+	    "name": "elasticsearch",
+	    "action": "load_es",
+	    "data_file": "wikidata_es_raw_format_data",
+	    "destination": "./data/es_data"
 	}
     ]
 }
