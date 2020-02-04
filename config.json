@@ -1,6 +1,6 @@
 {
     "setup_data_dir": "/data/datamart-setup-data",
-    "augment_seed_datasets_dir": "/data/datasets/seed_datasets_data_augmentation",
+    "augment_seed_datasets_dir": "/data/datasets/datasets/seed_datasets_data_augmentation",
     
     "setup_specification": [
 	{

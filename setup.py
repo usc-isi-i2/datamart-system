@@ -61,14 +61,19 @@ def setup(config, services):
     # Create env.sh for datamart-upload's docker-compose.yml
     templates = ['wikibase-docker/env.sh-template', 'datamart-upload/env.sh-template', 'env.sh-template']
     for template in templates:
+        env_file = None
+        if not os.path.exists(template):
+            print('Template file not found, skipping:', template)
+            continue
         env_file = template[:-9]
         env_template = open(template, 'r').read()
         env_template = Template(env_template)
         with open('env.sh', 'w') as fd:
             print(env_template.substitute(**template_mapping), file=fd)
-    print()
-    print('Environment file created:', env_file)
-    print()
+    if env_file:
+        print()
+        print('Environment file created:', env_file)
+        print()
 
     # Special handling for Elasticsearch:
     if 'elasticsearch' in services:
